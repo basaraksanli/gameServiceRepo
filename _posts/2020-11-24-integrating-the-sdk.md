@@ -53,7 +53,7 @@ buildscript {
 <p><strong>Step 7</strong>: In the build.gradle file in the app directory of your Android Studio project, add the following configurations:<br>
 Replace {version} of hwid with the latest version of HUAWEI Account Kit. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050048874" targey=_blank>Version Change History</a>.<br>
 Replace {version} of game with the latest version of HUAWEI Game Service. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050123471" targey=_blank>Version Change History</a>.
-</p>
+
 
 
 
@@ -65,7 +65,7 @@ dependencies {
 }
 </code></pre>
 	
-
+</p>
 
 <p><strong>Step 8</strong>: Enable data binding for MVVM architecture.</p>
 
