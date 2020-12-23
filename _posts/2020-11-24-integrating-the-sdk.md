@@ -57,13 +57,13 @@ Replace {version} of game with the latest version of HUAWEI Game Service. For de
 
 
 
-	<p><pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>apply plugin: 'com.huawei.agconnect'
+	<pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>apply plugin: 'com.huawei.agconnect'
 
 dependencies {
     implementation'com.huawei.hms:hwid:{version}'
     implementation'com.huawei.hms:game:{version}'
 }
-</code></pre></p>
+</code></pre>
 	
 
 
