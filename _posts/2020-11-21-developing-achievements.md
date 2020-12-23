@@ -25,7 +25,7 @@ init {
 <pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>
 fun unlockAchievement(achievementID: String) {
 // TODO: Unlock Achievement using reachwithResult function
-    val task: Task<Void> =
+    val task: Task&lt;Void&gt; =
         achievementClient!!.reachWithResult(achievementID)
     task.addOnSuccessListener { v: Void? ->
         Log.d("Unlock Achievement", "reach  success")
@@ -37,6 +37,9 @@ fun unlockAchievement(achievementID: String) {
         }
     }
 }
+
+
+
 </code></pre>
 
 <p><strong>Step 3</strong>: Develop the function which reveals the achievement using achievementID. This can be also used without the callback function.</p>
