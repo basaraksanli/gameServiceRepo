@@ -3,7 +3,7 @@ title: "Introduction"
 description: 1
 ---
 
-<huawei-codelab-about codelab-title="Huawei Video Kit" last-updated="2020-12-23T13:20:13-07:00" authors="Huawei Codelab Team">
+<huawei-codelab-about codelab-title="Huawei Game Service" last-updated="2020-12-23T13:20:13-07:00" authors="Huawei Codelab Team">
 <div class="codelab-title">
 <div class="token">Huawei Game Services Acihements</div></div>
 <div class="about-card">
@@ -36,8 +36,10 @@ To use Game Service Achievements, you will need to:
 	
  
 </ul>
+<p>
 	<img style="width: 160.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/1.png" onclick="imageclick(src)">  
 	<img style="width: 158.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/2.png" onclick="imageclick(src)"> 
+</p>
 <h2 class="checklist">
 	<strong>What You Will Learn</strong>
 </h2>
