@@ -37,8 +37,8 @@ To use Game Service Achievements, you will need to:
  
 </ul>
 <p>
-	<img style="width: 160.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/1.png" onclick="imageclick(src)">  
-	<img style="width: 158.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/2.png" onclick="imageclick(src)"> 
+	<img style="width: 250.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/1.png" onclick="imageclick(src)">  
+	<img style="width: 246.50px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/2.png" onclick="imageclick(src)"> 
 </p>
 <h2 class="checklist">
 	<strong>What You Will Learn</strong>
