@@ -3,9 +3,9 @@ title: "Preparing for the Integration"
 description: 10
 ---
 
-<p>Before you get started, complete the following preparations:</p>
+<p>Create an app in AppGallery Connect and obtain the project configuration file agconnect-services.json. The procedure is as follows:</p>
 <ul>
-	<li><a href="https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/config-agc-0000001050738427#EN-US_TOPIC_0000001050738427__section15850522183317" target="_blank">Create an app in AppGallery Connect</a>.</li>
+	<li><a href="https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/config-agc-0000001050738427#EN-US_TOPIC_0000001050738427__section15850522183317" target="_blank">Create an app in AppGallery Connect.</a> The app type must be <b>Game</b>.</li>
 	<li>Create an Android Studio project.</li>
 	<li>Generate a signing certificate.</li>
 	<li>Generate a <a href="https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/config-agc-0000001050738427#EN-US_TOPIC_0000001050738427__section147011294331" target="_blank">signing certificate fingerprint</a>.</li>

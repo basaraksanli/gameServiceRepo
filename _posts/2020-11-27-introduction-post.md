@@ -34,7 +34,10 @@ To use Game Service Achievements, you will need to:
 	<li>Unlock, Reveal, Increment Step, Set Step capabilities during gameplay.</li>
 	<li>Retreive the achievement list from the Game Service in the Achievements Page.</li>
 	
+ 
 </ul>
+	<img style="width: 160.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/1.png" onclick="imageclick(src)">  
+	<img style="width: 158.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/2.png" onclick="imageclick(src)"> 
 <h2 class="checklist">
 	<strong>What You Will Learn</strong>
 </h2>

@@ -1,15 +1,29 @@
 ---
-title: Set up the Project
+title: Configuring Your Development Environment
 description: 5
 ---
 
-<p>You can download the codelab project from: <a href="https://github.com/huaweicodelabs/VideoKit/tree/master/PlayVideosWithVideoKit" target="_blank">https://github.com/huaweicodelabs/VideoKit/tree/master/PlayVideosWithVideoKit</a></p>
 
-<h2><strong>Creating a Project</strong></h2>
-<p><strong>Step 1</strong>: Start Android Studio.</p>
-<p><strong>Step 2</strong>: Choose <strong>File</strong> &gt; <strong>Open</strong>, go to the directory where the sample project is decompressed, and click <strong>OK</strong>.<br><img style="width: 376.00px" src="https://raw.githubusercontent.com/bekiryavuzkoc/testRepo/gh-pages/assets/videokitcodelab.PNG" onclick="imageclick(src)"></p>
-<p><strong>Step 3</strong>: Configure the AppGallery Connect plug-in, Maven repository address, build dependencies, obfuscation scripts, and permissions. (These items have been configured in the sample code. If any of them does not meet your requirements, change it in your own project.)</p>
-<p><strong>1. Configure the Maven repository address and AppGallery Connect plug-in in the project's build.gradle file.</strong></p>
+<h2><strong>Enabling HUAWEI Game Service</strong></h2>
+<p><strong>Step 1</strong>: Sign in to AppGallery Connect, click <Strong>My projects</Strong>, find your project, and click your desired app. On the page that is displayed, go to <strong>Project settings</strong> > <strong>Manage APIs</strong>.</p>
+<p><strong>Step 2</strong>: Toggle the <strong>Huawei Account</strong> and <strong>Game Service</strong> switches.<br><img style="width: 800.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/3.png" onclick="imageclick(src)"></p>
+
+<h2><strong>Integrating the HMS Core SDK</strong></h2>
+<p>For Android Studio, Huawei provides the HMS Core SDK that can be integrated by using the Maven repository. Before developing your game app, you will need to integrate the HMS Core SDK into your Android Studio project.</p>
+
+
+<p><strong>Step 1</strong>: Sign in to AppGallery Connect, click <strong>My projects</strong>, find your project, and click your desired app. On the page that is displayed, go to <strong>Project settings</strong> > <strong>General information</strong>.</p>
+
+<p><strong>Step 2</strong>: In the App information area, click <strong>agconnect-services.json</strong> to download the configuration file.</p>
+
+<p><strong>Step 3</strong>: Copy the <strong>agconnect-service.json</strong> file to the project root directory.<br><img style="width: 600.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/4.png" onclick="imageclick(src)"></p>
+
+<p><strong>Step 4</strong>: Open the Android Studio project-level <strong>build.gradle</strong> file.</p>
+
+<p><strong>Step 5</strong>: In the <strong>build.gradle</strong> file of your Android Studio project, add the following configurations.</p>
+
+
+
 <ul>
 	<li>Go to <strong>allprojects</strong> &gt; <strong>repositories</strong> and configure the Maven repository address for the HMS Core SDK.<pre><div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">allprojects </span><span class="pun">{</span><span class="pln">
 		repositories </span><span class="pun">{</span><span class="pln">
@@ -38,21 +52,39 @@ description: 5
 	</span></code></pre>
 	</li>
 </ul>
-<p><strong>2. Configure the dependency package in the app's build.gradle file.</strong></p>
+<p><strong>Step 6</strong>: Open the Android Studio app-level build.gradle file.<br><img style="width: 300.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/5.png" onclick="imageclick(src)"></p>
+
+<p><strong>Step 7</strong>: In the build.gradle file in the app directory of your Android Studio project, add the following configurations:<br>
+Replace {version} of hwid with the latest version of HUAWEI Account Kit. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050048874" targey=_blank>Version Change History</a>.<br>
+Replace {version} of game with the latest version of HUAWEI Game Service. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050123471" targey=_blank>Version Change History</a>.
+</p>
+
+
+
 <ul>
 	<li>Add a dependency package to the <strong>dependencies</strong> section in the <strong>build.gradle</strong> file.<pre><div id="copy-button4" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">dependencies </span><span class="pun">{</span><span class="pln">
 		</span><span class="pun">...</span><span class="pln">
     </span><span class="str">            //Video Kit</span><span class="pln">
-		implementation </span><span class="str">'com.huawei.hms:videokit-player:1.0.1.300'</span><span class="pln">
-		</span><span class="pun">...</span><span class="pln">
+		implementation </span><span class="str">'com.huawei.hms:hwid:{version}'</span><span class="pln">
+		</span><span class="pun">implementation</span><span class="str"> 'com.huawei.hms:hwid:{version}'</span><span class="pln">
 	</span><span class="pun">}</span><span class="pln">
 	</span></code></pre>
-  <p>For Video Kit, please refer to <a href="https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050199403" target="_blank">latest version</a>.</p>
+
 	</li>
 	<li>Add the following information under <strong>apply plugin: 'com.android.application'</strong> in the file header:<pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">apply plugin</span><span class="pun">:</span><span class="pln"> </span><span class="str">'com.huawei.agconnect'</span><span class="pln">
 	</span></code></pre>
 	</li>
 </ul>
+
+<p><strong>Step 8</strong>: Enable data binding for MVVM architecture.</p>
+
+<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">databinding </span><span class="pun">{</span>
+    <span class="str">            enabled=true</span><span class="pln">
+		implementation </span><span class="str">'com.huawei.hms:hwid:{version}'</span><span class="pln">
+		</span><span class="pun">implementation</span><span class="str"> 'com.huawei.hms:hwid:{version}'</span><span class="pln">
+	</span><span class="pun">}</span><span class="pln">
+	</span></code></pre>
+
 <p><strong>3. Configure obfuscation scripts.</strong></p>
 <ul>
 	<li>Configure the following information in the <strong>app/proguard-rules.pro</strong> file:<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>                <span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
