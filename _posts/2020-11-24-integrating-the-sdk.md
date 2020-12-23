@@ -47,27 +47,7 @@ buildscript {
 }
 </code></pre>
 </p>
-<u1>
-    	</li>
-	<li>Go to <strong>buildscript</strong> &gt; <strong>repositories</strong> and configure the Maven repository address for the HMS Core SDK.<pre><div id="copy-button2" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">buildscript </span><span class="pun">{</span><span class="pln">
-		repositories </span><span class="pun">{</span><span class="pln">
-		   maven </span><span class="pun">{</span><span class="pln">url </span><span class="str">'https://developer.huawei.com/repo/'</span><span class="pun">}</span><span class="pln">
-			</span><span class="pun">...</span><span class="pln">
-		</span><span class="pun">}</span><span class="pln">
-		</span><span class="pun">...</span><span class="pln">
-	</span><span class="pun">}</span><span class="pln">
-	</span></code></pre>
-	</li>
-	<li>Go to <strong>buildscript</strong> &gt; <strong>dependencies</strong> and add build dependencies.<pre><div id="copy-button3" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">buildscript </span><span class="pun">{</span><span class="pln">
-		dependencies </span><span class="pun">{</span><span class="pln">
-     </span><span class="str">                   //Replace {agconnect_version} with the actual AGC plugin version number.</span><span class="pln">
-     </span><span class="str">                   //Example: classpath 'com.huawei.agconnect:agcp: 1.4.1.300'</span><span class="pln">
-			classpath </span><span class="str">'com.huawei.agconnect:agcp:{agconnect_version}'</span><span class="pln">
-		</span><span class="pun">}</span><span class="pln">
-	</span><span class="pun">}</span><span class="pln">
-	</span></code></pre>
-	</li>
-</ul>
+
 <p><strong>Step 6</strong>: Open the Android Studio app-level build.gradle file.<br><img style="width: 300.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/5.png" onclick="imageclick(src)"></p>
 
 <p><strong>Step 7</strong>: In the build.gradle file in the app directory of your Android Studio project, add the following configurations:<br>
@@ -77,20 +57,15 @@ Replace {version} of game with the latest version of HUAWEI Game Service. For de
 
 
 
-<ul>
-	<li>Add a dependency package to the <strong>dependencies</strong> section in the <strong>build.gradle</strong> file.<pre><div id="copy-button4" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">dependencies </span><span class="pun">{</span><span class="pln">
-		</span><span class="pun">...</span><span class="pln">
-    </span><span class="str">            //Video Kit</span><span class="pln">
-		implementation </span><span class="str">'com.huawei.hms:hwid:{version}'</span><span class="pln">
-		</span><span class="pun">implementation</span><span class="str"> 'com.huawei.hms:hwid:{version}'</span><span class="pln">
-	</span><span class="pun">}</span><span class="pln">
-	</span></code></pre>
+	<p><pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>apply plugin: 'com.huawei.agconnect'
 
-	</li>
-	<li>Add the following information under <strong>apply plugin: 'com.android.application'</strong> in the file header:<pre><div id="copy-button6" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">apply plugin</span><span class="pun">:</span><span class="pln"> </span><span class="str">'com.huawei.agconnect'</span><span class="pln">
-	</span></code></pre>
-	</li>
-</ul>
+dependencies {
+    implementation'com.huawei.hms:hwid:{version}'
+    implementation'com.huawei.hms:game:{version}'
+}
+</code></pre></p>
+	
+
 
 <p><strong>Step 8</strong>: Enable data binding for MVVM architecture.</p>
 
