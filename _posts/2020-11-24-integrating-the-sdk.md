@@ -22,16 +22,30 @@ description: 5
 
 <p><strong>Step 5</strong>: In the <strong>build.gradle</strong> file of your Android Studio project, add the following configurations.</p>
 
+    <pre><div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {url 'https://developer.huawei.com/repo/'}
+    }
+}
 
+buildscript {
+    repositories {
+        google()
+        jcenter()
 
-<ul>
-	<li>Go to <strong>allprojects</strong> &gt; <strong>repositories</strong> and configure the Maven repository address for the HMS Core SDK.<pre><div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">allprojects </span><span class="pun">{</span><span class="pln">
-		repositories </span><span class="pun">{</span><span class="pln">
-			maven </span><span class="pun">{</span><span class="pln"> url </span><span class="str">'https://developer.huawei.com/repo/'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
-			</span><span class="pun">...</span><span class="pln">
-		</span><span class="pun">}</span><span class="pln">
-	</span><span class="pun">}</span><span class="pln">
-	</span></code></pre>
+        maven {url 'https://developer.huawei.com/repo/'}
+    }
+}
+
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.huawei.agconnect:agcp:1.4.1.300'
+    }
+}
+</code></pre>
 	</li>
 	<li>Go to <strong>buildscript</strong> &gt; <strong>repositories</strong> and configure the Maven repository address for the HMS Core SDK.<pre><div id="copy-button2" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">buildscript </span><span class="pun">{</span><span class="pln">
 		repositories </span><span class="pun">{</span><span class="pln">
