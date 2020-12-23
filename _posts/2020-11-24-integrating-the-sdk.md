@@ -78,12 +78,10 @@ Replace {version} of game with the latest version of HUAWEI Game Service. For de
 
 <p><strong>Step 8</strong>: Enable data binding for MVVM architecture.</p>
 
-<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">databinding </span><span class="pun">{</span>
-    <span class="str">            enabled=true</span><span class="pln">
-		implementation </span><span class="str">'com.huawei.hms:hwid:{version}'</span><span class="pln">
-		</span><span class="pun">implementation</span><span class="str"> 'com.huawei.hms:hwid:{version}'</span><span class="pln">
-	</span><span class="pun">}</span><span class="pln">
-	</span></code></pre>
+<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>dataBinding{
+    enabled=true
+}
+</code></pre>
 
 <p><strong>3. Configure obfuscation scripts.</strong></p>
 <ul>

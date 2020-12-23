@@ -3,7 +3,7 @@ title: "Introduction"
 description: 1
 ---
 
-<huawei-codelab-about codelab-title="Huawei Game Service" last-updated="2020-12-23T13:20:13-07:00" authors="Huawei Codelab Team">
+<huawei-codelab-about codelab-title="Huawei Game Service Achievements" last-updated="2020-12-23T13:20:13-07:00" authors="Huawei Codelab Team">
 <div class="codelab-title">
 <div class="token">Huawei Game Services Acihements</div></div>
 <div class="about-card">
