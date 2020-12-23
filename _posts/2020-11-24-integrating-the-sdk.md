@@ -20,7 +20,7 @@ description: 5
 
 <p><strong>Step 4</strong>: Open the Android Studio project-level <strong>build.gradle</strong> file.</p>
 
-<p><strong>Step 5</strong>: In the <strong>build.gradle</strong> file of your Android Studio project, add the following configurations.</p>
+<p><strong>Step 5</strong>: In the <strong>build.gradle</strong> file of your Android Studio project, add the following configurations.
 
     <pre><div id="copy-button1" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>allprojects {
     repositories {
@@ -46,7 +46,9 @@ buildscript {
     }
 }
 </code></pre>
-	</li>
+</p>
+<u1>
+    	</li>
 	<li>Go to <strong>buildscript</strong> &gt; <strong>repositories</strong> and configure the Maven repository address for the HMS Core SDK.<pre><div id="copy-button2" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="pln">buildscript </span><span class="pun">{</span><span class="pln">
 		repositories </span><span class="pun">{</span><span class="pln">
 		   maven </span><span class="pun">{</span><span class="pln">url </span><span class="str">'https://developer.huawei.com/repo/'</span><span class="pun">}</span><span class="pln">
