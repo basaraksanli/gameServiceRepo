@@ -50,9 +50,9 @@ buildscript {
 
 <p><strong>Step 6</strong>: Open the Android Studio app-level build.gradle file.<br><img style="width: 300.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/5.png" onclick="imageclick(src)"></p>
 
-<p><strong>Step 7</strong>: In the build.gradle file in the app directory of your Android Studio project, add the following configurations:<br>
-Replace {version} of hwid with the latest version of HUAWEI Account Kit. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050048874" targey=_blank>Version Change History</a>.<br>
-Replace {version} of game with the latest version of HUAWEI Game Service. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050123471" targey=_blank>Version Change History</a>.
+<p><strong>Step 7</strong>: In the <b>build.gradle</b> file in the <b>app directory</b> of your Android Studio project, add the following configurations:<br>
+Replace {version} of <strong>hwid</strong> with the latest version of HUAWEI Account Kit. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050048874" targey=_blank>Version Change History</a>.<br>
+Replace {version} of <strong>game</strong> with the latest version of HUAWEI Game Service. For details, please refer to <a href= "https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/version-change-history-0000001050123471" targey=_blank>Version Change History</a>.
 
 
 
@@ -74,39 +74,23 @@ dependencies {
 }
 </code></pre>
 
-<p><strong>3. Configure obfuscation scripts.</strong></p>
-<ul>
-	<li>Configure the following information in the <strong>app/proguard-rules.pro</strong> file:<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>                <span class="pun">-</span><span class="pln">ignorewarnings</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="pun">*</span><span class="typ">Annotation</span><span class="pun">*</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Exceptions</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">InnerClasses</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">Signature</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keepattributes </span><span class="typ">SourceFile</span><span class="pun">,</span><span class="typ">LineNumberTable</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">hianalytics</span><span class="pun">.</span><span class="pln">android</span><span class="pun">.**{*;}</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">updatesdk</span><span class="pun">.**{*;}</span><span class="pln">
-		</span><span class="pun">-</span><span class="pln">keep </span><span class="kwd">class</span><span class="pln"> com</span><span class="pun">.</span><span class="pln">huawei</span><span class="pun">.</span><span class="pln">hms</span><span class="pun">.**{*;}</span><span class="pln">
-		</span></code></pre>
-	</li>
-	<li>If you are using AndResGuard, add it to the allowlist in the obfuscation script file.<pre><div id="copy-button8" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>               <span class="str"> "R.string.hms*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.connect_server_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.getting_message_fail_prompt_toast"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.no_available_network_prompt_toast"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.third_app_*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.upsdk_*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.layout.hms*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.layout.upsdk_*"</span><span class="pun">,</span><span class="pln"> 
-		</span><span class="str">"R.drawable.upsdk*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.color.upsdk*"</span><span class="pun">,</span><span class="pln"> 
-		</span><span class="str">"R.dimen.upsdk*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.style.upsdk*"</span><span class="pun">,</span><span class="pln">
-		</span><span class="str">"R.string.agc*"</span><span class="pln">
-		</span></code></pre>
-	</li>
-</ul>
-<p><strong>4. Configure permissions in the AndroidManifest.xml file.</strong></p>
-<pre><div id="copy-button9" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.INTERNET"</span><span class="tag">/&gt;</span><span class="pln">
-</span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_NETWORK_STATE"</span><span class="tag">/&gt;</span><span class="pln">
-</span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"android.permission.ACCESS_WIFI_STATE"</span><span class="tag">/&gt;</span><span class="pln">
-</span><span class="tag">&lt;uses-permission</span><span class="pln"> </span><span class="atn">android:name</span><span class="pun">=</span><span class="atv">"com.huawei.permission.SECURITY_DIAGNOSE"</span><span class="tag">/&gt;</span><span class="pln">
-  </span></code></pre>
-<p><strong>Step 4</strong>: In the Android Studio window, choose <strong>File</strong> &gt; <strong>Sync Project with Gradle Files</strong> to synchronize the project.</p>
+<p><strong>Step 9</strong>: Click <strong>Sync Now</strong> to synchronize the configurations.<br><img style="width: 600.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/7.png" onclick="imageclick(src)"></p>
+
+
+<h2><strong>Configure obfuscation scripts</strong></h2>
+<p><strong>Step 1</strong>: Sign in to AppGallery Connect, click <Strong>My projects</Strong>, find your project, and click your desired app. On the page that is displayed, go to <strong>Project settings</strong> > <strong>Manage APIs</strong>.<br><img style="width: 400.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/8.png" onclick="imageclick(src)"></p>
+
+<p><strong>Step 2</strong>: Add obfuscation configurations.<br>
+
+<pre><div id="copy-button7" class="copy-btn" title="Copy" onclick="copyCode(this.id)"></div><code>-ignorewarnings
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.hianalytics.android.**{*;}
+-keep class com.huawei.updatesdk.**{*;}
+-keep class com.huawei.hms.**{*;}
+
+</code></pre></p>
+
