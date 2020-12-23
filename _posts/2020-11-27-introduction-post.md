@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-description: 1
+description: 4
 ---
 
 <huawei-codelab-about codelab-title="Huawei Game Service Achievements" last-updated="2020-12-23T13:20:13-07:00" authors="Huawei Codelab Team">

@@ -1,6 +1,6 @@
 ---
-title: Create Wiseplayer and Play Video
-description: 15
+title: Designing the UI
+description: 20
 ---
 
 <p><strong>1. Locate following line to create the Wise Player Factory instance in WisePlayerInit Object.</strong></p>
