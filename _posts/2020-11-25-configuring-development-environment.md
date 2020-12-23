@@ -74,7 +74,7 @@ dependencies {
 }
 </code></pre>
 
-<p><strong>Step 9</strong>: Click <strong>Sync Now</strong> to synchronize the configurations.<br><img style="width: 600.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/7.png" onclick="imageclick(src)"></p>
+<p><strong>Step 9</strong>: Click <strong>Sync Now</strong> to synchronize the configurations.<br><img style="width: 800.00px" src="https://raw.githubusercontent.com/basaraksanli/gameServiceRepo/master/assets/7.png" onclick="imageclick(src)"></p>
 
 
 <h2><strong>Configure obfuscation scripts</strong></h2>
